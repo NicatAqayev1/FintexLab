@@ -1,0 +1,126 @@
+$main-blue-color : #2A2AB4;
+$main-red-color : #FF0000;
+#contact-main{
+    padding: 100px 0;
+    position: relative;
+    .contact-image{
+        position: absolute;
+        bottom: 0px;
+    }
+    .contact-image.left{
+        left: 0px;
+    }
+    .contact-image.right{
+        right: 0px;
+    }
+    .contact{
+        justify-content: center;
+        align-items: center;
+        .left{
+            h3{
+                color: $main-red-color;
+            }
+            h2{
+                font-weight: 600;
+            }
+            p{
+                width: 70%;
+                margin-right: auto;
+            }
+            .about-main-list{
+                flex-direction: column;
+                .about-main-item{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    i{
+                        font-size: 23px;
+                        color: $main-red-color;
+                    }
+                    p{
+                        margin: 15px;
+                    }
+                }
+                .about-main-item.blue{
+                    i{
+                        background-color: blue;
+                    }
+                }
+                .about-main-item.red{
+                    i{
+                        background-color: red;
+                    }
+                }
+                .about-main-item.green{
+                    i{
+                        background-color: green;
+                    }
+                }
+            }
+        }
+        .right{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    #contact-main{
+        
+        .contact-image{
+            
+        }
+        .contact-image.left{
+            
+        }
+        .contact-image.right{
+            
+        }
+        .contact{
+            text-align: center;
+            .left{
+                h3{
+                    
+                }
+                h2{
+                    
+                }
+                p{
+                    margin: 0 auto;
+                }
+                .about-main-list{
+                    
+                    .about-main-item{
+                        width: auto;
+                        i{
+                            
+                        }
+                        p{
+                            
+                        }
+                    }
+                    .about-main-item.blue{
+                        i{
+                            
+                        }
+                    }
+                    .about-main-item.red{
+                        i{
+                            
+                        }
+                    }
+                    .about-main-item.green{
+                        i{
+                            
+                        }
+                    }
+                }
+            }
+            .right{
+                img{
+                }
+            }
+        }
+    }
+}

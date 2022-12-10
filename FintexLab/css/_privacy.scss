@@ -1,0 +1,25 @@
+#privacy{
+    padding: 100px 0;
+    h1{
+        color: red;
+    }
+    h2{
+        color: rgba(255, 0, 0, 0.486);
+    }
+    ul{
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        li{
+            font-size: 16px;
+            margin: 20px;
+            width: 20%;
+            p{
+                strong{
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

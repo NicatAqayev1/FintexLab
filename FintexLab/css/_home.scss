@@ -1,0 +1,842 @@
+$main-blue-color : #2A2AB4;
+$main-red-color : #FF0000;
+#header2{
+    position: relative;
+    background-color: $main-blue-color;
+    .container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .logo{
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            z-index: 5;
+            img{
+
+            }
+            .logo-img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 70%;
+                .fintex-logo{
+
+                }
+                span{
+                    font-weight: 900;
+                    font-size: 25px;
+                    color: white;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            color: white;
+            width: 100%;
+            .top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 75%;
+                padding: 10px;
+                .left-top{
+                    span{
+                        a{
+                            color: white;
+                        }
+    font-family: 'Mulish', sans-serif;
+                    }
+                }
+                .right-top{
+                    span{
+                        margin: 30px;
+                        font-family: 'Mulish', sans-serif;
+                    }
+                }
+            }
+            .bottom{
+                position : relative;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: #202250;
+                // padding: 23px 60px;
+                .navs{
+                    width: 75%;
+                    height: calc(4rem + 6px);
+                    .nav{
+                        height: 100%;
+                        a{
+                            white-space: nowrap;
+                            color: white;
+                            font-family: 'Mulish', sans-serif;
+                            position: relative;
+                            transition: all .3s;
+                            display: inline-block;
+                            margin-top: 20px;
+                            font-size: 20px;
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0px;
+                                top: 100%;
+                                height: 5px;
+                                right: 100%;
+                                background-color: $main-red-color;
+                                transition: all .3s;
+                                border-radius: 5px;
+                                z-index: 7;
+                            }
+                            &:hover{
+                                color: $main-red-color;
+                                transition: all .3s;
+                                &::after{
+                                    right: 0%;
+                                    transition: all .3s;
+                                }
+                            }
+                        }
+                        .active-header-link{
+                            color: $main-red-color;
+                            &::after{
+                                right: 0%;
+                            }
+                        }
+                    }
+                }
+                .header-btn{
+                    position: absolute;
+                    top: 50%;
+                    right: -25px;
+                    transform: translateY(-50%);
+                    background-image: linear-gradient(to left, #a11515 0%, #ff0000 100%);
+                    padding:13px 26px;
+                    color: white;
+                    border-radius: 5px;
+                    font-family: 'Mulish', sans-serif;
+                }
+            }
+        }
+    }
+}
+.phone-header{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to left, #0090E4 0%, #1B18A1 100%);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    box-shadow: 0px 3px 13px #00000017;
+    .logo{
+        img{
+
+        }
+        span{
+            white-space: nowrap;
+            font-weight: 900;
+        }
+    }
+    i{
+        font-size: 20px;
+    }
+}
+#intro{
+    position: relative;
+    height: calc(90vh);
+    padding: 50px 0;
+    background-image: linear-gradient(to left, #0090E4 0%, #1B18A1 100%);
+
+    .mySwiperHomeIntro{
+        .swiper-wrapper{
+            .swiper-slide{
+                .inside{
+                    width: 80%;
+                    margin: 0 auto;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    .left{
+                        h3{
+                            color: $main-red-color;
+                            font-size: 18px;
+                            margin-bottom: 30px;
+                        }
+                        h2{
+                            font-weight: 900;
+                        }
+                        p{
+                            width: 60%;
+                            margin: 20px auto 30px 0;
+                        }
+                        a{
+                        }
+                    }
+                    .right{
+                        img{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-button-next,.swiper-button-prev{
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            &::after{
+                font-size: 25px;
+                font-weight: 900;
+            }
+        }
+        .swiper-button-prev{
+
+        }
+    }
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 70%;
+        margin: auto;
+    }
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: -1px;
+        // background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+    }
+    .bgTop {
+        z-index: 15;
+        opacity: 0.5;
+    }
+    .bgMiddle {
+        z-index: 10;
+        opacity: 0.75;
+    }
+    .bgBottom {
+        z-index: 5;
+    }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
+    .waveTop {
+        background-size: 80% 100px;
+    }
+    .waveAnimation .waveTop {
+      animation: move-wave 3s;
+       -webkit-animation: move-wave 3s;
+       -webkit-animation-delay: 1s;
+       animation-delay: 1s;
+    }
+    .waveMiddle {
+        background-size: 80% 120px;
+    }
+    .waveAnimation .waveMiddle {
+        animation: move_wave 10s linear infinite;
+    }
+    .waveBottom {
+        background-size: 80% 100px;
+    }
+    .waveAnimation .waveBottom {
+        animation: move_wave 15s linear infinite;
+    }
+}
+#whoWeAre{
+    padding: 50px 0;
+    .whoWeAre{
+        justify-content: center;
+        align-items: center;
+        .right{
+            h3{
+                color: $main-red-color;
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            h1{
+                font-weight: 900;
+            }
+            p{
+                width: 60%;
+                margin: 20px auto 30px 0;
+            }
+            a{
+            }
+        }
+        .left{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+#offer{
+    background-image: url(../images/offer/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    .cards{
+        .cart{
+            padding: 20px;
+            text-align: center;
+            .inside{
+                background-color: white;
+                padding: 60px;
+                box-shadow: 0px 0px 15px 1px #0000004d;
+                .image{
+    
+                }
+                .text{
+                    h3{
+                        margin-top: 20px;
+                    }
+                    p{
+                        margin: 20px 0 50px;
+                    }
+                    a{
+                    }
+                }
+            }
+        }
+    }
+}
+#contact{
+    padding: 50px;
+    position: relative;
+    background-color: #f0f1fa;
+    .contact-inside{
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: $main-blue-color;
+        padding: 50px;
+        border-radius: 10px;
+        .left{
+            h4{
+                color: $main-red-color;
+            }
+            h2{
+                color: white;
+                font-weight: 700;
+                margin-bottom: 50px;
+                font-size: 2.5rem;
+            }
+            .contact-form{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                input,button{
+                    padding: 10px;
+                    border-radius: 7px;
+                    margin: 5px;
+                    border: 0px;
+                }
+                input{
+                    width: 55%;
+                }
+                button{
+                    width: 30%;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .lottie-animation{
+                height: 300px;
+                #animation-container{
+                    background-color: #FF0000;
+                    #lottie-controls{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &::after,&::before{
+        content: "";
+        position: absolute;
+
+    }
+    .homeCLeft,.homeCRight{
+        position: absolute;
+    }
+    .homeCLeft{
+        top: 20px;
+        left: 0px;
+    }
+    .homeCRight{
+        bottom: 20px;
+        right: 0px;
+    }
+}
+#footer{
+    background-color: $main-blue-color;
+    padding: 70px;
+    position: relative;
+    .footer{
+        color: white;
+        justify-content: space-around;
+        align-items: flex-start;
+        .footer-cart{
+            padding: 30px 15px;
+            .logo{
+
+            }
+            h3{
+                font-weight: 600;
+            }
+            p{
+                font-size: 15px;
+            }
+
+            h4{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0px;
+                    width: 100px;
+                    height: 2px;
+                    background-color: white;
+                }
+            }
+            ul{
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 20px;
+                li{
+                    width: 100%;
+                    margin: 5px 0;
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .footer-white,.footer-orange{
+        position: absolute;
+    }
+    .footer-white.right{
+        right: 0px;
+        bottom: 0px;
+    }
+    .footer-orange.left{
+        left: 0px;
+        bottom: 0px;
+    }
+    .footer-white.left{
+        left: 0px;
+        top: 0px;
+    }
+    .footer-orange.right{
+        right: 0px;
+        top: 0px;
+    }
+    .right-foter-img{
+        transform: rotate(180deg);
+    }
+}
+@media(max-width : 1800px){
+    #header2{
+        
+        .container{
+            
+            .right{
+                width: 90%;
+            }
+        }
+    }
+}
+@media(max-width: 1600px){
+    #header2{
+        
+        .container{
+            
+            .right{
+                width: 80%;
+            }
+        }
+    }
+    #contact{
+        
+        .contact-inside{
+            
+            .left{
+                h4{
+                    
+                }
+                h2{
+                    
+                }
+                .contact-form{
+                    
+                    input,button{
+                        
+                    }
+                    input{
+                        
+                    }
+                    button{
+                        
+                    }
+                }
+            }
+            .right{
+                .lottie-animation{
+                    #animation-container{
+                        #lottie-controls{
+                        }
+                    }
+                }
+            }
+        }
+        &::after,&::before{
+    
+        }
+        .homeCLeft,.homeCRight{
+        }
+        .homeCLeft{
+            width: 110px;
+        }
+        .homeCRight{
+            width: 130px;
+        }
+    }
+}
+@media(max-width: 1400px){
+    #header2{
+        
+        .container{
+            
+            .right{
+                width: 70%;
+            }
+        }
+    }
+}
+@media(max-width: 1200px){
+    
+#main{
+  padding-top: 60px;   
+}
+#intro{
+    .mySwiperHomeIntro{
+        .swiper-wrapper{
+            .swiper-slide{
+                .inside{
+                    .right{
+                        img{
+                            display: none
+                        }
+                    };
+                }
+            }
+        }
+    }
+}
+    #header2{
+        display: none;
+        .container{
+            
+            .right{
+                width: 70%;
+            }
+        }
+    }
+    .phone-header{
+        display: flex;
+    }
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 70%;
+        margin: auto;
+    }
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: -1px;
+        // background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+    }
+    .bgTop {
+        z-index: 15;
+        opacity: 0.5;
+    }
+    .bgMiddle {
+        z-index: 10;
+        opacity: 0.75;
+    }
+    .bgBottom {
+        z-index: 5;
+    }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
+    .waveTop {
+        background-size: 90% 70px;
+    }
+    .waveAnimation .waveTop {
+      animation: move-wave 3s;
+       -webkit-animation: move-wave 3s;
+       -webkit-animation-delay: 1s;
+       animation-delay: 1s;
+    }
+    .waveMiddle {
+        background-size: 80% 60px;
+    }
+    .waveAnimation .waveMiddle {
+        animation: move_wave 10s linear infinite;
+    }
+    .waveBottom {
+        background-size: 850% 80px;
+    }
+    .waveAnimation .waveBottom {
+        animation: move_wave 15s linear infinite;
+    }
+}
+@media(max-width: 1000px){
+    #header{
+        
+        .header{
+            
+            .logo{
+                
+                img{
+                }
+                .logo-text{
+                    
+                }
+            }
+            .burger{
+                display: inline-block;
+            }
+            .navs{
+                display: none;
+                .nav{
+                    
+                    a{
+                        
+                    }
+                }
+            }
+        }
+    }
+    #contact{
+        
+        .contact-inside{
+            height: auto;
+            flex-direction: column-reverse;
+            .left{
+                h4{
+                    
+                }
+                h2{
+                    
+                }
+                .contact-form{
+                    
+                    input,button{
+                        
+                    }
+                    input{
+                        
+                    }
+                    button{
+                        
+                    }
+                }
+            }
+            .right{
+                .lottie-animation{
+                    #animation-container{
+                        #lottie-controls{
+                        }
+                    }
+                }
+            }
+        }
+        &::after,&::before{
+    
+        }
+        .homeCLeft,.homeCRight{
+        }
+        .homeCLeft{
+            width: 110px;
+        }
+        .homeCRight{
+            width: 130px;
+        }
+    }
+}
+@media(max-width: 768px){
+    #intro{
+        
+        .mySwiperHomeIntro{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inside{
+                        width: 80%;
+                        margin: 0 auto;
+                        justify-content: center;
+                        align-items: center;
+                        .left{
+                            text-align: center;
+                            h3{
+                            }
+                            h2{
+                            }
+                            p{
+                                width: 60%;
+                                margin: 0px auto 50px;
+                            }
+                            a{
+                            }
+                        }
+                        .right{
+                            text-align: center;
+                            img{
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    #whoWeAre{
+        
+        .whoWeAre{
+            
+            .right{
+                text-align: center;
+                h3{
+                    
+                }
+                h1{
+                    
+                }
+                p{
+                    margin: 0 auto 30px;
+                }
+                a{
+                }
+            }
+            .left{
+                img{
+                    
+                }
+            }
+        }
+    }
+    #contact{
+        
+        .contact-inside{
+            
+            .left{
+                text-align: center;
+                h4{
+                    
+                }
+                h2{
+                    margin-bottom: 30px;
+                    font-size: 20px;
+                }
+                .contact-form{
+                    
+                    input,button{
+                        width: 100%;
+                    }
+                    input{
+                        
+                    }
+                    button{
+                        
+                    }
+                }
+            }
+            .right{
+                .lottie-animation{
+                    height: 200px !important;
+                    #animation-container{
+                        #lottie-controls{
+                        }
+                    }
+                }
+            }
+        }
+        &::after,&::before{
+    
+        }
+        .homeCLeft,.homeCRight{
+        }
+        .homeCLeft{
+            width: 90px;
+        }
+        .homeCRight{
+            width: 100px;
+        }
+    }
+}
